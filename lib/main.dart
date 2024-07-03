@@ -59,6 +59,10 @@ class FacebookApp extends StatelessWidget {
      ),
        color: Colors.cyan,
        margin: EdgeInsets.fromLTRB(22, 11, 22, 0),
+       padding: EdgeInsets.all(55),
+       width:300 ,
+       height: 200,
+
      ),
     );
   }
