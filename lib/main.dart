@@ -12,10 +12,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FacebookApp() ,
+      home: FacebookApp(),
     );
   }
 }
+
 class FacebookApp extends StatelessWidget {
   const FacebookApp({super.key});
 
@@ -46,10 +47,19 @@ class FacebookApp extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(onPressed: (){},child:Icon(Icons.add) ,),
-      body: Text("The Text widget displays a string of text with single style. The string might break across multiple lines or might all be displayed on the same line depending on the layout constraints. ",style: TextStyle(),maxLines: 2,overflow: TextOverflow.fade,),
-
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+      ),
+     body: Container(child:  Text(
+       "The Text widget displays a string of text with single style. The string might break across multiple lines or might all be displayed on the same line depending on the layout constraints. ",
+       style: TextStyle(),
+       maxLines: 2,
+       overflow: TextOverflow.fade,
+     ),
+       color: Colors.cyan,
+       margin: EdgeInsets.fromLTRB(22, 11, 22, 0),
+     ),
     );
   }
 }
-
