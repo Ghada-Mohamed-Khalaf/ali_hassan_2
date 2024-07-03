@@ -51,19 +51,35 @@ class FacebookApp extends StatelessWidget {
         onPressed: () {},
         child: Icon(Icons.add),
       ),
-     body: Container(child:  Text(
-       "The Text widget displays a string of text with single style. The string might break across multiple lines or might all be displayed on the same line depending on the layout constraints. ",
-       style: TextStyle(),
-       maxLines: 2,
-       overflow: TextOverflow.fade,
-     ),
-       color: Colors.cyan,
-       margin: EdgeInsets.fromLTRB(22, 11, 22, 0),
-       padding: EdgeInsets.all(55),
-       width:300 ,
-       height: 200,
-
-     ),
+      body: Column(
+        children: [
+          Container(
+            child: Text(
+              "The Text widget displays a string of text with single style. The string might break across multiple lines or might all be displayed on the same line depending on the layout constraints. ",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+              maxLines: 2,
+              overflow: TextOverflow.fade,
+            ),
+            // color: Colors.cyan,
+            margin: EdgeInsets.fromLTRB(22, 11, 22, 0),
+            padding: EdgeInsets.all(55),
+            width: 300,
+            height: 200,
+            alignment: Alignment.topCenter,
+            transform: Matrix4.rotationZ(0.02),
+            decoration: BoxDecoration(
+                color: Colors.blueGrey,
+                border: Border.all(color: Colors.orange, width: 22),
+                //borderRadius: BorderRadius.circular(25),
+                shape: BoxShape.circle),
+          ),
+          Text("ghada",style: TextStyle(backgroundColor: Colors.orange,fontSize: 33,color: Colors.white ),),
+          IconButton(onPressed: (){}, icon:Icon(Icons.favorite,size: 33,color: Colors.red,),),
+        ],
+      ),
     );
   }
 }
